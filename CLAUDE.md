@@ -14,10 +14,10 @@ Tienda colombiana multimarca (parece Shopify). Se toma su **estructura y experie
 | Tarjeta de producto: foto, marca, nombre, notas, precio "desde" | Hecho |
 | Ficha con variantes (tamaño y molienda) y precio que cambia | Hecho |
 | Tabla de características (origen, altura, proceso, variedad, tueste, notas, puntaje) | Hecho |
-| Filtros del catálogo | Parcial: marca y tueste. Faltan precio, molienda, tamaño, origen y orden |
-| Barra superior de anuncios (envío gratis, promos) | Pendiente (etapa 2) |
-| Menú por categorías (cafés, métodos de preparación, kits, accesorios) | Pendiente (etapa 2) |
-| Búsqueda | Pendiente (etapa 2) |
+| Filtros del catálogo y orden | Hecho: marca, tueste, origen, precio máximo y orden, guardados en la URL. Molienda no aplica (todos los cafés se muelen a pedido) |
+| Barra superior de anuncios | Hecho (textos en `tienda.anuncios`, provisionales) |
+| Menú con marcas (desplegable y menú de celular) | Hecho. Categorías como accesorios o kits: cuando haya esos productos |
+| Búsqueda (encabezado y catálogo, sin importar tildes) | Hecho |
 | Fotos reales de producto y galería | Pendiente: hoy se usa una ilustración SVG (`BolsaCafe`) |
 | Etiquetas "oferta" y "agotado", stock | Pendiente (etapa 3) |
 | Carrito y vista rápida | Pendiente (etapa 3) |
@@ -38,11 +38,12 @@ Diferencia buscada: aquí el filtro por **marca** es central, porque la tienda e
 | `src/data/tienda.js` | Nombre, lema, ciudad y WhatsApp de la tienda |
 | `src/data/cafes.js` | Catálogo: cafés, tamaños con precio, moliendas |
 | `src/lib/formato.js` | `formatoBs` y `enlaceWhatsApp` |
+| `src/lib/texto.js` | `normalizar` (quita tildes para buscar) |
 | `src/app/globals.css` | Paleta (tokens `crema`, `espresso`, `cafe`, `caramelo`, `hoja`) y fuentes |
 | `src/app/page.js` | Portada |
 | `src/app/cafes/page.js` | Catálogo (usa `components/Catalogo.js`, con filtros en cliente) |
 | `src/app/cafes/[slug]/page.js` | Ficha de producto (usa `components/SelectorCompra.js`) |
-| `src/components/` | Encabezado, PiePagina, TarjetaCafe, BolsaCafe, Catalogo, SelectorCompra |
+| `src/components/` | BarraAnuncios, Encabezado (menú y búsqueda), PiePagina, TarjetaCafe, BolsaCafe, Catalogo, SelectorCompra |
 
 ## Convenciones
 - Nombres de archivos, componentes y variables en español (`TarjetaCafe`, `precioDesde`).
@@ -59,7 +60,7 @@ Diferencia buscada: aquí el filtro por **marca** es central, porque la tienda e
 
 ## Hoja de ruta
 1. **Catálogo básico** (hecho): catálogo, ficha con variantes, pedido por WhatsApp.
-2. **Catálogo profesional**: más filtros y orden, búsqueda, barra de anuncios, menú por categorías, fotos reales, logo y paleta definitivos, dominio, publicar en Vercel.
+2. **Catálogo profesional**: filtros, orden, búsqueda, barra de anuncios y menú (hecho); fotos reales, logo y paleta definitivos, dominio, publicar en Vercel (pendiente).
 3. **Carrito y pedidos**: carrito, formulario de entrega, Supabase (productos, stock, pedidos), panel para editar productos.
 4. **Pagos y envíos**: QR bancario (primero fijo con confirmación manual), contra entrega, zonas y tarifas en Cochabamba, avisos por correo.
 5. **Crecer**: cuentas, reseñas, cupones, suscripciones, blog, envíos a otras ciudades.
