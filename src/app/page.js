@@ -18,7 +18,7 @@ export default function Inicio() {
         <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28">
           <p className="text-sm font-semibold uppercase tracking-widest text-caramelo">Café de Bolivia</p>
           <h1 className="mt-4 max-w-2xl font-titulo text-4xl leading-tight sm:text-6xl">
-            Las mejores marcas de café, en una sola tienda
+            Las mejores marcas de café boliviano, en una sola tienda
           </h1>
           <p className="mt-6 max-w-xl text-lg text-crema/80">{tienda.lema}.</p>
           <Link
