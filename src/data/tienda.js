@@ -6,4 +6,10 @@ export const tienda = {
   ciudad: "Cochabamba",
   // Número de WhatsApp en formato internacional, sin "+" ni espacios (591 = Bolivia).
   whatsapp: "59170000000",
+  // Mensajes de la barra superior. PROVISIONAL: confirmar condiciones reales de envío.
+  anuncios: [
+    "Entregas en Cochabamba",
+    "Pide por WhatsApp y te confirmamos en minutos",
+    "Café molido a tu gusto sin costo extra",
+  ],
 };

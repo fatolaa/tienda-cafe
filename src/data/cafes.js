@@ -112,7 +112,7 @@ export const cafes = [
     slug: "tunari-espresso",
     marca: "Café del Tunari",
     nombre: "Blend Espresso Tunari",
-    origen: "Mezcla de Yungas y Caranavi",
+    origen: "Yungas y Caranavi, La Paz",
     tueste: "Oscuro",
     notas: ["Cacao", "Caramelo quemado"],
     altura: "1.400 a 1.700 m",
@@ -174,3 +174,10 @@ export function buscarCafe(slug) {
 export function precioDesde(cafe) {
   return Math.min(...cafe.tamanos.map((t) => t.precio));
 }
+
+// Departamento de origen: la parte después de la coma ("Caranavi, La Paz" -> "La Paz").
+export function departamento(cafe) {
+  return cafe.origen.split(",").pop().trim();
+}
+
+export const marcas = [...new Set(cafes.map((c) => c.marca))].sort();
