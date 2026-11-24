@@ -7,6 +7,7 @@ import { useCarrito } from "@/lib/carrito";
 import { moliendas } from "@/data/cafes";
 import { tienda } from "@/data/tienda";
 import { formatoBs, enlaceWhatsApp } from "@/lib/formato";
+import { IconoCarrito, IconoWhatsApp } from "@/components/Iconos";
 
 function Opciones({ titulo, opciones, elegida, elegir }) {
   return (
@@ -62,13 +63,30 @@ export default function SelectorCompra({ cafe }) {
           <button type="button" className="px-4 py-2" onClick={() => setCantidad(cantidad + 1)} aria-label="Sumar uno">+</button>
         </div>
       </div>
-      <button
-        type="button"
-        onClick={agregarAlCarrito}
-        className="block w-full rounded-full bg-acento px-6 py-4 text-center font-bold text-texto transition hover:bg-acento-suave"
-      >
-        Agregar al carrito · {formatoBs(total)}
-      </button>
+      <div className="flex items-baseline justify-between border-t border-borde pt-4">
+        <span className="text-sm text-texto-suave">Total</span>
+        <span className="text-xl font-semibold">{formatoBs(total)}</span>
+      </div>
+      {/* Dos formas de comprar, con el mismo tamaño y peso visual. */}
+      <div className="grid gap-3 sm:grid-cols-2">
+        <button
+          type="button"
+          onClick={agregarAlCarrito}
+          className="flex items-center justify-center gap-2 rounded-full bg-acento px-5 py-4 font-semibold text-texto transition hover:bg-acento-suave"
+        >
+          <IconoCarrito />
+          Agregar al carrito
+        </button>
+        <a
+          href={enlaceWhatsApp(tienda.whatsapp, mensaje)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 rounded-full bg-texto px-5 py-4 font-semibold text-fondo transition hover:bg-salvia"
+        >
+          <IconoWhatsApp />
+          Pedir por WhatsApp
+        </a>
+      </div>
       {agregado && (
         <p role="status" className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-superficie px-4 py-3 text-sm ring-1 ring-borde">
           <span>Agregado al carrito.</span>
@@ -77,14 +95,6 @@ export default function SelectorCompra({ cafe }) {
           </Link>
         </p>
       )}
-      <a
-        href={enlaceWhatsApp(tienda.whatsapp, mensaje)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block text-center text-sm font-semibold text-texto-suave underline-offset-4 hover:underline"
-      >
-        O pedir solo este café por WhatsApp
-      </a>
       <p className="text-sm text-texto-suave">Entregas en {tienda.ciudad}. Coordinamos pago y envío por WhatsApp.</p>
     </div>
   );
