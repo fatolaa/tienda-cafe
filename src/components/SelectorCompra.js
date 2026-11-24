@@ -65,7 +65,7 @@ export default function SelectorCompra({ cafe }) {
       <button
         type="button"
         onClick={agregarAlCarrito}
-        className="block w-full rounded-full bg-acento-fuerte px-6 py-4 text-center font-semibold text-white transition hover:bg-acento"
+        className="block w-full rounded-full bg-acento px-6 py-4 text-center font-bold text-texto transition hover:bg-acento-suave"
       >
         Agregar al carrito · {formatoBs(total)}
       </button>

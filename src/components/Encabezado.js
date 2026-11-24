@@ -17,7 +17,7 @@ function BotonCarrito({ onClick }) {
         <path d="M9 7a3 3 0 0 1 6 0" />
       </svg>
       {listo && unidades > 0 && (
-        <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-acento-fuerte px-1 text-xs font-semibold text-white">
+        <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-acento px-1 text-xs font-bold text-texto ring-2 ring-texto">
           {unidades}
         </span>
       )}

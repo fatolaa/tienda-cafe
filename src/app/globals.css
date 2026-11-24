@@ -1,16 +1,20 @@
 @import "tailwindcss";
 
-/* Paleta propuesta por Fabian (2026-11-24): crema, verde abeto y rojo tomate.
-   Los tonos marcados "derivado" salen de la paleta para tarjetas, bordes,
-   texto secundario y botones con buen contraste. */
+/* Paleta de ChatGPT elegida por Fabian (2026-11-24), con blanco en lugar del crema.
+   Proporción sugerida: 60% blanco, 25% verde oscuro, 10% amarillo lima, 5% complementarios. */
 @theme {
-  --color-fondo: #ede0c8; /* crema: fondo de la página */
-  --color-superficie: #f6efe1; /* derivado: tarjetas y campos */
-  --color-borde: #d8c7a8; /* derivado: bordes y divisores */
-  --color-texto: #14392b; /* verde abeto: texto y secciones oscuras */
-  --color-texto-suave: #4c6457; /* derivado: texto secundario */
-  --color-acento: #ee4129; /* rojo tomate: detalles y números */
-  --color-acento-fuerte: #c9311b; /* derivado: botones y enlaces legibles */
+  --color-fondo: #ffffff; /* blanco: fondo de la página (reemplaza al crema #F8F7EB) */
+  --color-superficie: #f4f6f1; /* derivado: tarjetas, campos y secciones claras */
+  --color-borde: #dde3d6; /* derivado: bordes y divisores */
+  --color-texto: #243331; /* verde bosque oscuro: texto, pie y secciones oscuras */
+  --color-texto-suave: #52615d; /* derivado: texto secundario */
+  --color-acento: #eaf63b; /* amarillo lima: botones de compra (con texto verde) */
+  --color-acento-suave: #e5ef75; /* amarillo suave: botones al pasar el mouse */
+  --color-acento-fuerte: #873f50; /* vino café: enlaces y números, legible sobre blanco */
+  --color-vino: #873f50; /* vino café: banner principal */
+  --color-salvia: #354441; /* verde salvia profundo: fondo de las fotos de producto */
+  --color-oliva: #a5b58a; /* verde oliva claro: complementario */
+  --color-caramelo: #e58a24; /* caramelo tostado: complementario */
 }
 
 /* Fuentes: se cargan en layout.js */
