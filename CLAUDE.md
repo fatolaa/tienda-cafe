@@ -20,7 +20,8 @@ Tienda colombiana multimarca (parece Shopify). Se toma su **estructura y experie
 | Búsqueda (encabezado y catálogo, sin importar tildes) | Hecho |
 | Fotos reales de producto y galería | Pendiente: hoy se usa una ilustración SVG (`BolsaCafe`) |
 | Etiquetas "oferta" y "agotado", stock | Pendiente (etapa 3) |
-| Carrito y vista rápida | Pendiente (etapa 3) |
+| Carrito | Hecho: guardado en el navegador (`src/lib/carrito.js`), página `/carrito`, pedido completo por WhatsApp. Pasará a Supabase en la etapa 3 |
+| Vista rápida | Pendiente |
 | Nota de envío y políticas (cambios, FAQ, términos) en la ficha | Pendiente (etapas 2 y 4) |
 | Reseñas verificadas, cupones, puntos, suscripciones, blog, quiz, newsletter | Pendiente (etapa 5) |
 
@@ -39,11 +40,13 @@ Diferencia buscada: aquí el filtro por **marca** es central, porque la tienda e
 | `src/data/cafes.js` | Catálogo: cafés, tamaños con precio, moliendas |
 | `src/lib/formato.js` | `formatoBs` y `enlaceWhatsApp` |
 | `src/lib/texto.js` | `normalizar` (quita tildes para buscar) |
+| `src/lib/carrito.js` | `ProveedorCarrito` y `useCarrito` (carrito en localStorage) |
+| `src/app/carrito/page.js` | Página del carrito (usa `components/VistaCarrito.js`) |
 | `src/app/globals.css` | Paleta crema, verde abeto y rojo tomate (tokens `fondo`, `superficie`, `borde`, `texto`, `texto-suave`, `acento`, `acento-fuerte`) y fuentes |
 | `src/app/page.js` | Portada |
 | `src/app/cafes/page.js` | Catálogo (usa `components/Catalogo.js`, con filtros en cliente) |
 | `src/app/cafes/[slug]/page.js` | Ficha de producto (usa `components/SelectorCompra.js`) |
-| `src/components/` | Encabezado (menú y búsqueda), PiePagina, TarjetaCafe, BolsaCafe, Catalogo, SelectorCompra |
+| `src/components/` | Encabezado (menú, búsqueda y carrito), PiePagina, TarjetaCafe, BolsaCafe, Catalogo, SelectorCompra, VistaCarrito |
 
 ## Convenciones
 - Nombres de archivos, componentes y variables en español (`TarjetaCafe`, `precioDesde`).
@@ -61,7 +64,7 @@ Diferencia buscada: aquí el filtro por **marca** es central, porque la tienda e
 ## Hoja de ruta
 1. **Catálogo básico** (hecho): catálogo, ficha con variantes, pedido por WhatsApp.
 2. **Catálogo profesional**: filtros, orden, búsqueda y menú (hecho); fotos reales, logo y paleta definitivos, dominio, publicar en Vercel (pendiente).
-3. **Carrito y pedidos**: carrito, formulario de entrega, Supabase (productos, stock, pedidos), panel para editar productos.
+3. **Carrito y pedidos**: carrito en el navegador (hecho); formulario de entrega, Supabase (productos, stock, pedidos), panel para editar productos.
 4. **Pagos y envíos**: QR bancario (primero fijo con confirmación manual), contra entrega, zonas y tarifas en Cochabamba, avisos por correo.
 5. **Crecer**: cuentas, reseñas, cupones, suscripciones, blog, envíos a otras ciudades.
 
