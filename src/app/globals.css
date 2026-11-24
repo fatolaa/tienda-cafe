@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
-/* Paleta propuesta por Fabian (2026-11-24). Los colores marcados "derivado"
-   salen de la paleta para tarjetas, bordes y textos secundarios. */
+/* Paleta propuesta por Fabian (2026-11-24): crema, verde abeto y rojo tomate.
+   Los tonos marcados "derivado" salen de la paleta para tarjetas, bordes,
+   texto secundario y botones con buen contraste. */
 @theme {
-  --color-fondo: #1c1512; /* fondo casi negro */
-  --color-superficie: #2a211c; /* derivado: tarjetas, campos, secciones */
-  --color-borde: #3d312a; /* derivado: bordes y divisores */
-  --color-crema: #f3e9dc; /* texto principal */
-  --color-crema-suave: #bfae9c; /* derivado: texto secundario */
-  --color-caramelo: #b5703b; /* café caramelo: botones y detalles */
-  --color-caramelo-claro: #d08b55; /* derivado: enlaces sobre fondo oscuro */
-  --color-oliva: #6b7a4b; /* acento verde oliva: botón de WhatsApp */
+  --color-fondo: #ede0c8; /* crema: fondo de la página */
+  --color-superficie: #f6efe1; /* derivado: tarjetas y campos */
+  --color-borde: #d8c7a8; /* derivado: bordes y divisores */
+  --color-texto: #14392b; /* verde abeto: texto y secciones oscuras */
+  --color-texto-suave: #4c6457; /* derivado: texto secundario */
+  --color-acento: #ee4129; /* rojo tomate: detalles y números */
+  --color-acento-fuerte: #c9311b; /* derivado: botones y enlaces legibles */
 }
 
 /* Fuentes: se cargan en layout.js */
@@ -20,10 +20,10 @@
 }
 
 html {
-  color-scheme: dark; /* listas y campos del navegador en modo oscuro */
+  color-scheme: light;
 }
 
 body {
   background: var(--color-fondo);
-  color: var(--color-crema);
+  color: var(--color-texto);
 }

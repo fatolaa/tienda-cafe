@@ -19,8 +19,8 @@ function Opciones({ titulo, opciones, elegida, elegir }) {
             aria-pressed={op === elegida}
             className={`rounded-full border px-4 py-2 text-sm transition ${
               op === elegida
-                ? "border-crema bg-crema text-fondo"
-                : "border-borde bg-superficie hover:border-crema-suave"
+                ? "border-texto bg-texto text-fondo"
+                : "border-borde bg-superficie hover:border-texto-suave"
             }`}
           >
             {op}
@@ -57,11 +57,11 @@ export default function SelectorCompra({ cafe }) {
         href={enlaceWhatsApp(tienda.whatsapp, mensaje)}
         target="_blank"
         rel="noopener noreferrer"
-        className="block rounded-full bg-oliva px-6 py-4 text-center font-semibold text-white transition hover:opacity-90"
+        className="block rounded-full bg-acento-fuerte px-6 py-4 text-center font-semibold text-white transition hover:bg-acento"
       >
         Pedir por WhatsApp · {formatoBs(total)}
       </a>
-      <p className="text-sm text-crema-suave">Entregas en {tienda.ciudad}. Coordinamos pago y envío por WhatsApp.</p>
+      <p className="text-sm text-texto-suave">Entregas en {tienda.ciudad}. Coordinamos pago y envío por WhatsApp.</p>
     </div>
   );
 }

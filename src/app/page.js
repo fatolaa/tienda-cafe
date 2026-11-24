@@ -14,16 +14,16 @@ export default function Inicio() {
 
   return (
     <>
-      <section className="bg-superficie text-crema">
+      <section className="bg-texto text-fondo">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28">
-          <p className="text-sm font-semibold uppercase tracking-widest text-caramelo">Café de Bolivia</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-acento">Café de Bolivia</p>
           <h1 className="mt-4 max-w-2xl font-titulo text-4xl leading-tight sm:text-6xl">
             Las mejores marcas de café boliviano, en una sola tienda
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-crema/80">{tienda.lema}.</p>
+          <p className="mt-6 max-w-xl text-lg text-fondo/80">{tienda.lema}.</p>
           <Link
             href="/cafes"
-            className="mt-8 inline-block rounded-full bg-caramelo px-7 py-3 font-semibold text-fondo transition hover:bg-crema"
+            className="mt-8 inline-block rounded-full bg-acento-fuerte px-7 py-3 font-semibold text-white transition hover:bg-acento"
           >
             Ver todos los cafés
           </Link>
@@ -33,7 +33,7 @@ export default function Inicio() {
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="flex items-end justify-between gap-4">
           <h2 className="font-titulo text-3xl">Destacados</h2>
-          <Link href="/cafes" className="text-sm font-semibold text-caramelo-claro hover:underline">
+          <Link href="/cafes" className="text-sm font-semibold text-acento-fuerte hover:underline">
             Ver catálogo
           </Link>
         </div>
@@ -50,9 +50,9 @@ export default function Inicio() {
           <ol className="mt-8 grid gap-6 sm:grid-cols-3">
             {pasos.map((paso, i) => (
               <li key={paso.titulo} className="rounded-2xl bg-fondo p-6">
-                <span className="font-titulo text-3xl text-caramelo">{i + 1}</span>
+                <span className="font-titulo text-3xl text-acento-fuerte">{i + 1}</span>
                 <h3 className="mt-2 font-semibold">{paso.titulo}</h3>
-                <p className="mt-1 text-sm text-crema-suave">{paso.texto}</p>
+                <p className="mt-1 text-sm text-texto-suave">{paso.texto}</p>
               </li>
             ))}
           </ol>
