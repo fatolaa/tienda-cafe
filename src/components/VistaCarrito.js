@@ -3,6 +3,7 @@
 // Lista del carrito: cambiar cantidades, quitar productos y enviar el pedido completo por WhatsApp.
 import { useState } from "react";
 import Link from "next/link";
+import { IconoWhatsApp } from "@/components/Iconos";
 import BolsaCafe from "@/components/BolsaCafe";
 import { tienda } from "@/data/tienda";
 import { useCarrito } from "@/lib/carrito";
@@ -107,9 +108,10 @@ export default function VistaCarrito() {
           href={enlaceWhatsApp(tienda.whatsapp, mensaje)}
           target="_blank"
           rel="noopener noreferrer"
-          className="block rounded-full bg-acento px-6 py-4 text-center font-bold text-texto transition hover:bg-acento-suave"
+          className="flex items-center justify-center gap-2 rounded-full bg-texto px-5 py-4 text-center font-semibold text-fondo transition hover:bg-salvia"
         >
-          Enviar pedido por WhatsApp
+          <IconoWhatsApp />
+          Enviar por WhatsApp
         </a>
         <div className="flex justify-between text-sm">
           <Link href="/cafes" className="font-semibold text-acento-fuerte hover:underline">Seguir comprando</Link>
