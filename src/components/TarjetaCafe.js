@@ -11,11 +11,11 @@ export default function TarjetaCafe({ cafe }) {
     >
       <BolsaCafe cafe={cafe} className="aspect-[5/6] w-full" />
       <div className="flex flex-1 flex-col p-4">
-        <p className="text-xs font-semibold uppercase tracking-wide text-crema-suave">{cafe.marca}</p>
-        <h3 className="mt-1 font-titulo text-lg leading-snug group-hover:text-caramelo-claro">{cafe.nombre}</h3>
-        <p className="mt-1 text-sm text-crema-suave">{cafe.notas.join(" · ")}</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-texto-suave">{cafe.marca}</p>
+        <h3 className="mt-1 font-titulo text-lg leading-snug group-hover:text-acento-fuerte">{cafe.nombre}</h3>
+        <p className="mt-1 text-sm text-texto-suave">{cafe.notas.join(" · ")}</p>
         <p className="mt-auto pt-3 font-semibold">
-          <span className="text-sm font-normal text-crema-suave">Desde </span>
+          <span className="text-sm font-normal text-texto-suave">Desde </span>
           {formatoBs(precioDesde(cafe))}
         </p>
       </div>

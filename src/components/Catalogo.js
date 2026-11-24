@@ -114,13 +114,13 @@ export default function Catalogo({ cafes }) {
         </div>
       </div>
 
-      <div className="mt-6 flex items-center gap-4 text-sm text-crema-suave">
+      <div className="mt-6 flex items-center gap-4 text-sm text-texto-suave">
         <p>{visibles.length === 1 ? "1 café" : `${visibles.length} cafés`}</p>
         {hayFiltros && (
           <button
             type="button"
             onClick={() => router.replace(orden === "destacados" ? ruta : `${ruta}?orden=${orden}`, { scroll: false })}
-            className="font-semibold text-caramelo-claro hover:underline"
+            className="font-semibold text-acento-fuerte hover:underline"
           >
             Quitar filtros
           </button>
@@ -133,7 +133,7 @@ export default function Catalogo({ cafes }) {
         ))}
       </div>
       {visibles.length === 0 && (
-        <p className="mt-8 text-crema-suave">No encontramos cafés con esa búsqueda o esos filtros.</p>
+        <p className="mt-8 text-texto-suave">No encontramos cafés con esa búsqueda o esos filtros.</p>
       )}
     </>
   );

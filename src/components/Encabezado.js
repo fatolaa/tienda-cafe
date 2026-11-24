@@ -16,7 +16,7 @@ function Busqueda({ className = "" }) {
         name="q"
         type="search"
         placeholder="Buscar café, marca o sabor"
-        className="w-full rounded-full border border-borde bg-superficie px-4 py-2 text-sm outline-none focus:border-crema-suave"
+        className="w-full rounded-full border border-borde bg-superficie px-4 py-2 text-sm outline-none focus:border-texto-suave"
       />
     </form>
   );
@@ -29,14 +29,14 @@ export default function Encabezado() {
   return (
     <header className="sticky top-0 z-20 border-b border-borde bg-fondo/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-6 px-4 py-4">
-        <Link href="/" className="font-titulo text-2xl font-semibold text-crema" onClick={cerrar}>
+        <Link href="/" className="font-titulo text-2xl font-semibold text-texto" onClick={cerrar}>
           {tienda.nombre}
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
-          <Link href="/cafes" className="hover:text-caramelo-claro">Todos los cafés</Link>
+          <Link href="/cafes" className="hover:text-acento-fuerte">Todos los cafés</Link>
           <div className="group relative">
-            <button type="button" className="hover:text-caramelo-claro" aria-haspopup="true">
+            <button type="button" className="hover:text-acento-fuerte" aria-haspopup="true">
               Marcas ▾
             </button>
             <ul className="invisible absolute left-0 top-full mt-2 w-56 rounded-xl bg-superficie p-2 opacity-0 shadow-lg ring-1 ring-borde transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
@@ -52,7 +52,7 @@ export default function Encabezado() {
               ))}
             </ul>
           </div>
-          <Link href="/#como-comprar" className="hover:text-caramelo-claro">Cómo comprar</Link>
+          <Link href="/#como-comprar" className="hover:text-acento-fuerte">Cómo comprar</Link>
         </nav>
 
         <Busqueda className="ml-auto hidden w-64 md:block" />
@@ -75,7 +75,7 @@ export default function Encabezado() {
           <Busqueda />
           <nav className="mt-4 flex flex-col gap-1 text-base font-medium">
             <Link href="/cafes" onClick={cerrar} className="py-2">Todos los cafés</Link>
-            <p className="pt-2 text-xs font-semibold uppercase tracking-wide text-crema-suave">Marcas</p>
+            <p className="pt-2 text-xs font-semibold uppercase tracking-wide text-texto-suave">Marcas</p>
             {marcas.map((marca) => (
               <Link
                 key={marca}
