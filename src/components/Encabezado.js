@@ -5,6 +5,25 @@ import { useState } from "react";
 import Link from "next/link";
 import { tienda } from "@/data/tienda";
 import { marcas } from "@/data/cafes";
+import { useCarrito } from "@/lib/carrito";
+
+function BotonCarrito({ onClick }) {
+  const { unidades, listo } = useCarrito();
+  const etiqueta = unidades === 1 ? "Carrito, 1 producto" : `Carrito, ${unidades} productos`;
+  return (
+    <Link href="/carrito" onClick={onClick} aria-label={etiqueta} className="relative inline-flex rounded-lg p-2 hover:text-acento-fuerte">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M6 7h12l-1 13H7L6 7z" />
+        <path d="M9 7a3 3 0 0 1 6 0" />
+      </svg>
+      {listo && unidades > 0 && (
+        <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-acento-fuerte px-1 text-xs font-semibold text-white">
+          {unidades}
+        </span>
+      )}
+    </Link>
+  );
+}
 
 function Busqueda({ className = "" }) {
   // Formulario simple: al enviar va a /cafes?q=... (funciona incluso sin JavaScript).
@@ -57,9 +76,13 @@ export default function Encabezado() {
 
         <Busqueda className="ml-auto hidden w-64 md:block" />
 
+        <div className="ml-auto md:ml-0">
+          <BotonCarrito onClick={cerrar} />
+        </div>
+
         <button
           type="button"
-          className="ml-auto rounded-lg p-2 md:hidden"
+          className="rounded-lg p-2 md:hidden"
           onClick={() => setAbierto(!abierto)}
           aria-expanded={abierto}
           aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
