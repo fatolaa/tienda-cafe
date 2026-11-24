@@ -14,7 +14,7 @@ export default function Inicio() {
 
   return (
     <>
-      <section className="bg-espresso text-crema">
+      <section className="bg-superficie text-crema">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28">
           <p className="text-sm font-semibold uppercase tracking-widest text-caramelo">Café de Bolivia</p>
           <h1 className="mt-4 max-w-2xl font-titulo text-4xl leading-tight sm:text-6xl">
@@ -23,7 +23,7 @@ export default function Inicio() {
           <p className="mt-6 max-w-xl text-lg text-crema/80">{tienda.lema}.</p>
           <Link
             href="/cafes"
-            className="mt-8 inline-block rounded-full bg-caramelo px-7 py-3 font-semibold text-espresso transition hover:bg-crema"
+            className="mt-8 inline-block rounded-full bg-caramelo px-7 py-3 font-semibold text-fondo transition hover:bg-crema"
           >
             Ver todos los cafés
           </Link>
@@ -33,7 +33,7 @@ export default function Inicio() {
       <section className="mx-auto max-w-6xl px-4 py-16">
         <div className="flex items-end justify-between gap-4">
           <h2 className="font-titulo text-3xl">Destacados</h2>
-          <Link href="/cafes" className="text-sm font-semibold text-caramelo-oscuro hover:underline">
+          <Link href="/cafes" className="text-sm font-semibold text-caramelo-claro hover:underline">
             Ver catálogo
           </Link>
         </div>
@@ -44,15 +44,15 @@ export default function Inicio() {
         </div>
       </section>
 
-      <section id="como-comprar" className="bg-crema-oscura">
+      <section id="como-comprar" className="bg-superficie">
         <div className="mx-auto max-w-6xl px-4 py-16">
           <h2 className="font-titulo text-3xl">Cómo comprar</h2>
           <ol className="mt-8 grid gap-6 sm:grid-cols-3">
             {pasos.map((paso, i) => (
-              <li key={paso.titulo} className="rounded-2xl bg-crema p-6">
+              <li key={paso.titulo} className="rounded-2xl bg-fondo p-6">
                 <span className="font-titulo text-3xl text-caramelo">{i + 1}</span>
                 <h3 className="mt-2 font-semibold">{paso.titulo}</h3>
-                <p className="mt-1 text-sm text-cafe">{paso.texto}</p>
+                <p className="mt-1 text-sm text-crema-suave">{paso.texto}</p>
               </li>
             ))}
           </ol>

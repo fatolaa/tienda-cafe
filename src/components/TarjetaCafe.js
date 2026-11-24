@@ -7,15 +7,15 @@ export default function TarjetaCafe({ cafe }) {
   return (
     <Link
       href={`/cafes/${cafe.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-crema-oscura transition hover:-translate-y-1 hover:shadow-md"
+      className="group flex flex-col overflow-hidden rounded-2xl bg-superficie shadow-sm ring-1 ring-borde transition hover:-translate-y-1 hover:shadow-md"
     >
       <BolsaCafe cafe={cafe} className="aspect-[5/6] w-full" />
       <div className="flex flex-1 flex-col p-4">
-        <p className="text-xs font-semibold uppercase tracking-wide text-cafe">{cafe.marca}</p>
-        <h3 className="mt-1 font-titulo text-lg leading-snug group-hover:text-caramelo-oscuro">{cafe.nombre}</h3>
-        <p className="mt-1 text-sm text-cafe">{cafe.notas.join(" · ")}</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-crema-suave">{cafe.marca}</p>
+        <h3 className="mt-1 font-titulo text-lg leading-snug group-hover:text-caramelo-claro">{cafe.nombre}</h3>
+        <p className="mt-1 text-sm text-crema-suave">{cafe.notas.join(" · ")}</p>
         <p className="mt-auto pt-3 font-semibold">
-          <span className="text-sm font-normal text-cafe">Desde </span>
+          <span className="text-sm font-normal text-crema-suave">Desde </span>
           {formatoBs(precioDesde(cafe))}
         </p>
       </div>

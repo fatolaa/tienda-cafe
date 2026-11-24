@@ -25,7 +25,7 @@ function Selector({ etiqueta, valor, cambiar, children }) {
       <select
         value={valor}
         onChange={(e) => cambiar(e.target.value)}
-        className="rounded-lg border border-crema-oscura bg-white px-3 py-2"
+        className="rounded-lg border border-borde bg-superficie px-3 py-2"
       >
         {children}
       </select>
@@ -78,7 +78,7 @@ export default function Catalogo({ cafes }) {
 
   return (
     <>
-      <div className="mt-6 rounded-2xl bg-white p-4 ring-1 ring-crema-oscura">
+      <div className="mt-6 rounded-2xl bg-superficie p-4 ring-1 ring-borde">
         <label className="flex flex-col gap-1 text-sm font-medium">
           Buscar
           <input
@@ -86,7 +86,7 @@ export default function Catalogo({ cafes }) {
             value={q}
             onChange={(e) => cambiar("q", e.target.value)}
             placeholder="Nombre, marca, origen o sabor (por ejemplo: chocolate)"
-            className="rounded-lg border border-crema-oscura px-3 py-2"
+            className="rounded-lg border border-borde px-3 py-2"
           />
         </label>
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
@@ -114,13 +114,13 @@ export default function Catalogo({ cafes }) {
         </div>
       </div>
 
-      <div className="mt-6 flex items-center gap-4 text-sm text-cafe">
+      <div className="mt-6 flex items-center gap-4 text-sm text-crema-suave">
         <p>{visibles.length === 1 ? "1 café" : `${visibles.length} cafés`}</p>
         {hayFiltros && (
           <button
             type="button"
             onClick={() => router.replace(orden === "destacados" ? ruta : `${ruta}?orden=${orden}`, { scroll: false })}
-            className="font-semibold text-caramelo-oscuro hover:underline"
+            className="font-semibold text-caramelo-claro hover:underline"
           >
             Quitar filtros
           </button>
@@ -133,7 +133,7 @@ export default function Catalogo({ cafes }) {
         ))}
       </div>
       {visibles.length === 0 && (
-        <p className="mt-8 text-cafe">No encontramos cafés con esa búsqueda o esos filtros.</p>
+        <p className="mt-8 text-crema-suave">No encontramos cafés con esa búsqueda o esos filtros.</p>
       )}
     </>
   );

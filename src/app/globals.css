@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
-/* Paleta provisional de la tienda. Cambia estos colores y se actualiza todo el sitio. */
+/* Paleta propuesta por Fabian (2026-11-24). Los colores marcados "derivado"
+   salen de la paleta para tarjetas, bordes y textos secundarios. */
 @theme {
-  --color-crema: #f7f1e8;
-  --color-crema-oscura: #ede3d3;
-  --color-espresso: #2b1d14;
-  --color-cafe: #6f4e37;
-  --color-caramelo: #c8873a;
-  --color-caramelo-oscuro: #a96c25;
-  --color-hoja: #5b7553;
+  --color-fondo: #1c1512; /* fondo casi negro */
+  --color-superficie: #2a211c; /* derivado: tarjetas, campos, secciones */
+  --color-borde: #3d312a; /* derivado: bordes y divisores */
+  --color-crema: #f3e9dc; /* texto principal */
+  --color-crema-suave: #bfae9c; /* derivado: texto secundario */
+  --color-caramelo: #b5703b; /* café caramelo: botones y detalles */
+  --color-caramelo-claro: #d08b55; /* derivado: enlaces sobre fondo oscuro */
+  --color-oliva: #6b7a4b; /* acento verde oliva: botón de WhatsApp */
 }
 
 /* Fuentes: se cargan en layout.js */
@@ -17,7 +19,11 @@
   --font-titulo: var(--font-titulos), Georgia, serif;
 }
 
+html {
+  color-scheme: dark; /* listas y campos del navegador en modo oscuro */
+}
+
 body {
-  background: var(--color-crema);
-  color: var(--color-espresso);
+  background: var(--color-fondo);
+  color: var(--color-crema);
 }
