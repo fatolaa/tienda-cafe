@@ -19,8 +19,8 @@ function Opciones({ titulo, opciones, elegida, elegir }) {
             aria-pressed={op === elegida}
             className={`rounded-full border px-4 py-2 text-sm transition ${
               op === elegida
-                ? "border-espresso bg-espresso text-crema"
-                : "border-crema-oscura bg-white hover:border-cafe"
+                ? "border-crema bg-crema text-fondo"
+                : "border-borde bg-superficie hover:border-crema-suave"
             }`}
           >
             {op}
@@ -47,7 +47,7 @@ export default function SelectorCompra({ cafe }) {
       <Opciones titulo="Molienda" opciones={moliendas} elegida={molienda} elegir={setMolienda} />
       <div>
         <p className="text-sm font-semibold">Cantidad</p>
-        <div className="mt-2 inline-flex items-center rounded-full border border-crema-oscura bg-white">
+        <div className="mt-2 inline-flex items-center rounded-full border border-borde bg-superficie">
           <button type="button" className="px-4 py-2" onClick={() => setCantidad(Math.max(1, cantidad - 1))} aria-label="Restar uno">−</button>
           <span className="w-8 text-center">{cantidad}</span>
           <button type="button" className="px-4 py-2" onClick={() => setCantidad(cantidad + 1)} aria-label="Sumar uno">+</button>
@@ -57,11 +57,11 @@ export default function SelectorCompra({ cafe }) {
         href={enlaceWhatsApp(tienda.whatsapp, mensaje)}
         target="_blank"
         rel="noopener noreferrer"
-        className="block rounded-full bg-hoja px-6 py-4 text-center font-semibold text-white transition hover:opacity-90"
+        className="block rounded-full bg-oliva px-6 py-4 text-center font-semibold text-white transition hover:opacity-90"
       >
         Pedir por WhatsApp · {formatoBs(total)}
       </a>
-      <p className="text-sm text-cafe">Entregas en {tienda.ciudad}. Coordinamos pago y envío por WhatsApp.</p>
+      <p className="text-sm text-crema-suave">Entregas en {tienda.ciudad}. Coordinamos pago y envío por WhatsApp.</p>
     </div>
   );
 }

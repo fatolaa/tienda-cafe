@@ -33,7 +33,7 @@ export default async function FichaCafe({ params }) {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-10">
-      <nav className="text-sm text-cafe">
+      <nav className="text-sm text-crema-suave">
         <Link href="/" className="hover:underline">Inicio</Link> /{" "}
         <Link href="/cafes" className="hover:underline">Cafés</Link> / {cafe.nombre}
       </nav>
@@ -42,9 +42,9 @@ export default async function FichaCafe({ params }) {
         <BolsaCafe cafe={cafe} className="w-full rounded-2xl" />
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wide text-cafe">{cafe.marca}</p>
+          <p className="text-sm font-semibold uppercase tracking-wide text-crema-suave">{cafe.marca}</p>
           <h1 className="mt-1 font-titulo text-4xl">{cafe.nombre}</h1>
-          <p className="mt-4 text-lg text-cafe">{cafe.descripcion}</p>
+          <p className="mt-4 text-lg text-crema-suave">{cafe.descripcion}</p>
           <div className="mt-8">
             <SelectorCompra cafe={cafe} />
           </div>
@@ -53,10 +53,10 @@ export default async function FichaCafe({ params }) {
 
       <div className="mt-14 max-w-2xl">
         <h2 className="font-titulo text-2xl">Características</h2>
-        <dl className="mt-4 divide-y divide-crema-oscura rounded-2xl bg-white ring-1 ring-crema-oscura">
+        <dl className="mt-4 divide-y divide-borde rounded-2xl bg-superficie ring-1 ring-borde">
           {caracteristicas.map(([nombre, valor]) => (
             <div key={nombre} className="grid grid-cols-2 px-5 py-3 text-sm">
-              <dt className="text-cafe">{nombre}</dt>
+              <dt className="text-crema-suave">{nombre}</dt>
               <dd className="font-medium">{valor}</dd>
             </div>
           ))}

@@ -2,7 +2,7 @@ import { tienda } from "@/data/tienda";
 
 export default function PiePagina() {
   return (
-    <footer className="mt-16 bg-espresso text-crema">
+    <footer className="mt-16 border-t border-borde bg-superficie text-crema">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:grid-cols-2">
         <div>
           <p className="font-titulo text-xl">{tienda.nombre}</p>

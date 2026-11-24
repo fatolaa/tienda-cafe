@@ -39,7 +39,7 @@ Diferencia buscada: aquí el filtro por **marca** es central, porque la tienda e
 | `src/data/cafes.js` | Catálogo: cafés, tamaños con precio, moliendas |
 | `src/lib/formato.js` | `formatoBs` y `enlaceWhatsApp` |
 | `src/lib/texto.js` | `normalizar` (quita tildes para buscar) |
-| `src/app/globals.css` | Paleta (tokens `crema`, `espresso`, `cafe`, `caramelo`, `hoja`) y fuentes |
+| `src/app/globals.css` | Paleta oscura (tokens `fondo`, `superficie`, `borde`, `crema`, `crema-suave`, `caramelo`, `caramelo-claro`, `oliva`) y fuentes |
 | `src/app/page.js` | Portada |
 | `src/app/cafes/page.js` | Catálogo (usa `components/Catalogo.js`, con filtros en cliente) |
 | `src/app/cafes/[slug]/page.js` | Ficha de producto (usa `components/SelectorCompra.js`) |
@@ -47,7 +47,7 @@ Diferencia buscada: aquí el filtro por **marca** es central, porque la tienda e
 
 ## Convenciones
 - Nombres de archivos, componentes y variables en español (`TarjetaCafe`, `precioDesde`).
-- Colores solo con los tokens de la paleta, nunca hex sueltos en componentes (excepto el color de cada bolsa en `cafes.js`).
+- Colores solo con los tokens de la paleta, nunca hex sueltos en componentes (excepto el color de cada bolsa en `cafes.js` y la ilustración `BolsaCafe`). El sitio es oscuro: fondo `fondo`, texto `crema`, tarjetas `superficie`.
 - Títulos con `font-titulo` (Fraunces); texto con la fuente por defecto (Inter).
 - Diseño pensado primero para celular.
 - Componentes de servidor por defecto; `"use client"` solo donde hay interacción.
