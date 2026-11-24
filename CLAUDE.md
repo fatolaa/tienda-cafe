@@ -42,7 +42,7 @@ Diferencia buscada: aquí el filtro por **marca** es central, porque la tienda e
 | `src/lib/texto.js` | `normalizar` (quita tildes para buscar) |
 | `src/lib/carrito.js` | `ProveedorCarrito` y `useCarrito` (carrito en localStorage) |
 | `src/app/carrito/page.js` | Página del carrito (usa `components/VistaCarrito.js`) |
-| `src/app/globals.css` | Paleta crema, verde abeto y rojo tomate (tokens `fondo`, `superficie`, `borde`, `texto`, `texto-suave`, `acento`, `acento-fuerte`) y fuentes |
+| `src/app/globals.css` | Paleta blanco, verde bosque, amarillo lima y vino café (tokens `fondo`, `superficie`, `borde`, `texto`, `texto-suave`, `acento`, `acento-suave`, `acento-fuerte`, `vino`, `salvia`, `oliva`, `caramelo`) y fuentes |
 | `src/app/page.js` | Portada |
 | `src/app/cafes/page.js` | Catálogo (usa `components/Catalogo.js`, con filtros en cliente) |
 | `src/app/cafes/[slug]/page.js` | Ficha de producto (usa `components/SelectorCompra.js`) |
@@ -50,7 +50,7 @@ Diferencia buscada: aquí el filtro por **marca** es central, porque la tienda e
 
 ## Convenciones
 - Nombres de archivos, componentes y variables en español (`TarjetaCafe`, `precioDesde`).
-- Colores solo con los tokens de la paleta, nunca hex sueltos en componentes (excepto el color de cada bolsa en `cafes.js` y la ilustración `BolsaCafe`). Fondo crema (`fondo`), texto verde (`texto`), tarjetas `superficie`; secciones oscuras con `bg-texto text-fondo`; botones con `bg-acento-fuerte text-white`.
+- Colores solo con los tokens de la paleta, nunca hex sueltos en componentes (excepto el color de cada bolsa en `cafes.js` y la ilustración `BolsaCafe`). Fondo blanco (`fondo`, nunca crema: pedido de Fabian), texto verde bosque (`texto`), tarjetas `superficie`; banner principal `bg-vino text-fondo`; pie y secciones oscuras `bg-texto text-fondo`; botones de compra `bg-acento text-texto hover:bg-acento-suave` (amarillo lima, usar poco); enlaces `text-acento-fuerte` (vino café).
 - Títulos con `font-titulo` (Fraunces); texto con la fuente por defecto (Inter).
 - Diseño pensado primero para celular.
 - Componentes de servidor por defecto; `"use client"` solo donde hay interacción.

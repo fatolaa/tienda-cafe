@@ -14,7 +14,7 @@ export default function Inicio() {
 
   return (
     <>
-      <section className="bg-texto text-fondo">
+      <section className="bg-vino text-fondo">
         <div className="mx-auto max-w-6xl px-4 py-20 sm:py-28">
           <p className="text-sm font-semibold uppercase tracking-widest text-acento">Café de Bolivia</p>
           <h1 className="mt-4 max-w-2xl font-titulo text-4xl leading-tight sm:text-6xl">
@@ -23,7 +23,7 @@ export default function Inicio() {
           <p className="mt-6 max-w-xl text-lg text-fondo/80">{tienda.lema}.</p>
           <Link
             href="/cafes"
-            className="mt-8 inline-block rounded-full bg-acento-fuerte px-7 py-3 font-semibold text-white transition hover:bg-acento"
+            className="mt-8 inline-block rounded-full bg-acento px-7 py-3 font-bold text-texto transition hover:bg-acento-suave"
           >
             Ver todos los cafés
           </Link>

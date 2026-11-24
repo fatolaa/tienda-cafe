@@ -45,7 +45,7 @@ export default function VistaCarrito() {
     return (
       <div className="mt-8 rounded-2xl bg-superficie p-8 text-center ring-1 ring-borde">
         <p className="text-lg">Tu carrito está vacío.</p>
-        <Link href="/cafes" className="mt-4 inline-block rounded-full bg-acento-fuerte px-6 py-3 font-semibold text-white hover:bg-acento">
+        <Link href="/cafes" className="mt-4 inline-block rounded-full bg-acento px-6 py-3 font-bold text-texto hover:bg-acento-suave">
           Ver cafés
         </Link>
       </div>
@@ -107,7 +107,7 @@ export default function VistaCarrito() {
           href={enlaceWhatsApp(tienda.whatsapp, mensaje)}
           target="_blank"
           rel="noopener noreferrer"
-          className="block rounded-full bg-acento-fuerte px-6 py-4 text-center font-semibold text-white transition hover:bg-acento"
+          className="block rounded-full bg-acento px-6 py-4 text-center font-bold text-texto transition hover:bg-acento-suave"
         >
           Enviar pedido por WhatsApp
         </a>
